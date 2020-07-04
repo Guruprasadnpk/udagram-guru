@@ -29,3 +29,4 @@ deploy:
   on:
     branch: master
     tags: true
+
