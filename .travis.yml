@@ -18,8 +18,6 @@ before_install:
   - docker push gurppup/udacity-backend-user:$TRAVIS_BUILD_NUMBER
   - docker push gurppup/udacity-frontend:$TRAVIS_BUILD_NUMBER
   - docker push gurppup/udacity-reverseproxy:$TRAVIS_BUILD_NUMBER
-  
-before_deploy:
   - chmod u+x $TRAVIS_BUILD_DIR/deployment/updateKube.sh && bash $TRAVIS_BUILD_DIR/deployment/updateKube.sh
 
 deploy:
@@ -27,5 +25,5 @@ deploy:
   script: chmod u+x $TRAVIS_BUILD_DIR/deployment/deploy.sh && bash $TRAVIS_BUILD_DIR/deployment/deploy.sh
   skip_cleanup: true
   on:
-    tags: false
+    tags: true
     all_branches: true
