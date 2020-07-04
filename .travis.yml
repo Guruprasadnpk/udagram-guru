@@ -27,6 +27,5 @@ deploy:
   script: chmod u+x $TRAVIS_BUILD_DIR/deployment/deploy.sh && bash $TRAVIS_BUILD_DIR/deployment/deploy.sh
   skip_cleanup: true
   on:
-    branch: master
-    tags: true
-
+    tags: false
+    all_branches: true
