@@ -24,7 +24,5 @@ deploy:
   provider: script
   script: chmod u+x $TRAVIS_BUILD_DIR/deployment/deploy.sh && bash $TRAVIS_BUILD_DIR/deployment/deploy.sh
   skip_cleanup: true
-  branches:
-    only:
-    - master
-    - /v\d+\.\d+[a-z]/
+  on:
+    branch: master
