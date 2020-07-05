@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/Guruprasadnpk/udagram-guru.svg?branch=master)](https://travis-ci.com/github/Guruprasadnpk/udagram-guru)
 
-This udagram application contains 2 api services and a frontend service hosted on a AWS EKS kubernetes cluster. 
+This udagram application contains 2 api services(User, Feed) and a frontend service hosted on a AWS EKS kubernetes cluster. 
 It is
 * a containerized application, created using Kubernetes resource, and deployed in a Kubernetes cluster.
 * implemented using automatic continuous integration (CI) and continuous delivery (CD) using Travis CI.
