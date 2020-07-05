@@ -20,6 +20,7 @@ before_install:
 #  - docker push gurppup/udacity-frontend:$TRAVIS_BUILD_NUMBER
   - docker push gurppup/udacity-reverseproxy:$TRAVIS_BUILD_NUMBER
   - chmod u+x $TRAVIS_BUILD_DIR/deployment/updateKube.sh && bash $TRAVIS_BUILD_DIR/deployment/updateKube.sh
+  - mkdir ./kube
 
 deploy:
   provider: script
