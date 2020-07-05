@@ -53,7 +53,7 @@ Install the prerequisites
 4. Install cluster-side controller
 ```kubectl apply -f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.12.4/controller.yaml```
 
-# Add secrets and configMap
+### Add secrets and configMap
 * aws-secrets
 Encode aws credentials:  ```cat ~/.aws/credentials | base64```
    Create aws-secrets.yaml
