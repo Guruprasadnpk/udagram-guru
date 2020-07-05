@@ -11,13 +11,13 @@ before_install:
   - chmod +x kubectl && sudo mv kubectl /usr/local/bin/kubectl
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - sudo find / -name "kube"
-#  - docker build -t $DOCKER_USERNAME/udacity-backend-feed:$TRAVIS_BUILD_NUMBER udacity-c3-restapi-feed/.
-#  - docker build -t $DOCKER_USERNAME/udacity-backend-user:$TRAVIS_BUILD_NUMBER udacity-c3-restapi-user/.
-#  - docker build -t $DOCKER_USERNAME/udacity-frontend:$TRAVIS_BUILD_NUMBER udacity-c3-frontend/.
+  - docker build -t $DOCKER_USERNAME/udacity-backend-feed:$TRAVIS_BUILD_NUMBER udacity-c3-restapi-feed/.
+  - docker build -t $DOCKER_USERNAME/udacity-backend-user:$TRAVIS_BUILD_NUMBER udacity-c3-restapi-user/.
+  - docker build -t $DOCKER_USERNAME/udacity-frontend:$TRAVIS_BUILD_NUMBER udacity-c3-frontend/.
   - docker build -t $DOCKER_USERNAME/udacity-reverseproxy:$TRAVIS_BUILD_NUMBER udacity-c3-reverseproxy/.
-#  - docker push gurppup/udacity-backend-feed:$TRAVIS_BUILD_NUMBER
-#  - docker push gurppup/udacity-backend-user:$TRAVIS_BUILD_NUMBER
-#  - docker push gurppup/udacity-frontend:$TRAVIS_BUILD_NUMBER
+  - docker push gurppup/udacity-backend-feed:$TRAVIS_BUILD_NUMBER
+  - docker push gurppup/udacity-backend-user:$TRAVIS_BUILD_NUMBER
+  - docker push gurppup/udacity-frontend:$TRAVIS_BUILD_NUMBER
   - docker push gurppup/udacity-reverseproxy:$TRAVIS_BUILD_NUMBER
   - chmod u+x $TRAVIS_BUILD_DIR/deployment/updateKube.sh && bash $TRAVIS_BUILD_DIR/deployment/updateKube.sh
   - mkdir ./kube
