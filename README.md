@@ -2,11 +2,12 @@
 
 [![Build Status](https://travis-ci.com/Guruprasadnpk/udagram-guru.svg?branch=master)](https://travis-ci.com/github/Guruprasadnpk/udagram-guru)
 
-Udagram is 
+This udagram application contains 2 api services and a frontend service hosted on a AWS EKS kubernetes cluster. 
+It is
+* a containerized application, created using Kubernetes resource, and deployed in a Kubernetes cluster.
+* implemented using automatic continuous integration (CI) and continuous delivery (CD) using Travis CI.
+* converted from a monolithic application into multiple microservices and able to do rolling-updates and rollbacks
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
 ### Components
 
 Udagram uses a number of components to work properly:
