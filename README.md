@@ -56,7 +56,8 @@ Install the prerequisites
 ### Add secrets and configMap
 * aws-secrets
 Encode aws credentials:  ```cat ~/.aws/credentials | base64```
-   Create aws-secrets.yaml
+   
+Create aws-secrets.yaml
     ```
     apiVersion: v1
     data:
