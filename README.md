@@ -33,8 +33,7 @@ https://github.com/bitnami-labs/sealed-secrets/releases
 Install the prerequisites
 
 1. Create an EKS cluster using the following command
-    ```
-    eksctl create cluster\
+    ```eksctl create cluster\
            --name udagram\
            --version 1.16\
            --region us-west-2\
@@ -45,11 +44,13 @@ Install the prerequisites
            --nodes-min 1\
            --nodes-max 4\
            --ssh-access\
-           --managed
-    ```
+           --managed```
+           
 2. Update kubeconfig: https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
    ```aws eks --region us-west-2 update-kubeconfig --name udagram```
+   
 3. Install sealed secret Client-Side Utility: ```brew install kubeseal```
+
 4. Install cluster-side controller
 ```kubectl apply -f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.12.4/controller.yaml```
 
